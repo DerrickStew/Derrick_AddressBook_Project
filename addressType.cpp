@@ -23,7 +23,7 @@ void addressType::setState(string st)
 {
 	if (st.length() > 2)
 	{
-		state = "XX";
+		state = " XX";
 		cout << "State is invalid" << endl;
 	}
 	else
