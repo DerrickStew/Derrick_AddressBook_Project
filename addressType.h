@@ -1,21 +1,22 @@
 #pragma once
 #include <iostream>
 using namespace std;
+
 class addressType
 {
 private:
 	string address = "";
 	string city = "";
 	string state = "XX";
-	int zipCode = 10000;
+	int zipcode = 10000;
 
 public:
+	void print();
 
 	//preconditions - address and city are supplied, supply state as a valid postal abbrev.
 	//                supply zipcode as a 5-digit integer > 10000
 	// postcondition - use supplied values for address and city, validate state and zipcode
-	void print();
-	addressType(string = "(Your address)", string = "(Your city)", string = "XX", int = 10000);
+	addressType(string = "", string = "", string = "XX", int = 10000);
 
 	// setState
 	// preconditions - supplied value is a vaild postal (2 character) state abbreviation
@@ -29,6 +30,12 @@ public:
 
 	void setAddress(string add) { address = add; }
 
-	string getState() { return state; }
-};
+	void setCity(string cit) { city = cit; }
 
+	string getState() { return state; }
+	int getZipcode() { return zipcode; }
+	string getAddress() { return address; }
+	string getCity() { return city; }
+
+
+};

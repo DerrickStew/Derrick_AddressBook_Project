@@ -6,7 +6,7 @@ using namespace std;
 void addressType::print()
 {
 	cout << address << endl;
-	cout << city << ", " << state << " " << zipCode << endl;
+	cout << city << state << " " << zipcode << endl;
 }
 
 
@@ -27,16 +27,25 @@ void addressType::setState(string st)
 		cout << "State is invalid" << endl;
 	}
 	else
-		state = st;
+		state = " " + st + ",";
 }
 
 void addressType::setZipcode(int zip)
 {
-	if (zip <= 10000)
+	if (zip == 10000) //case for default constructor 
 	{
-		zip = 10000;
+		zipcode = zip;
+	}
+	else if (zip <= 11111) //case for outside lowerbound zipcode
+	{
+		zipcode = 10000;
+		cout << "Zipcode is invalid" << endl;
+	}
+	else if (zip > 99999) //case for upperbound zipcode
+	{
+		zipcode = 10000;
 		cout << "Zipcode is invalid" << endl;
 	}
 	else
-		zipCode = zip;
+		zipcode = zip;
 }
