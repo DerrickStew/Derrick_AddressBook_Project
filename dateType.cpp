@@ -19,7 +19,7 @@ dateType::dateType(int month, int day, int year)
 	}
 	else
 	{
-		cout << "Invalid date, default date (1-1-1900) is set";
+		cout << "Date invalid, setting date to:";
 	}
 }
 
@@ -34,14 +34,17 @@ void dateType::setDate(int month, int day, int year)
 	}
 	else
 	{
-		cout << "Invalid date, default date (1-1-1900) is set";
+		cout << "Date invalid, setting to 1/1/1900" << endl;
+		dMonth = 1;
+		dDay = 1;
+		dYear = 1900;
 	}
 }
 
 bool dateType::isDateGood(int month, int day, int year)
 {
 	// check for valid year (>1900)
-	if (month < 1900)
+	if (year < 1900)
 		return false;
 
 	// check for valid month 
