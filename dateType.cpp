@@ -13,13 +13,11 @@ dateType::dateType(int month, int day, int year)
 	// check for valid date
 	if (isDateGood(month, day, year))
 	{
-		dMonth = month;
-		dDay = day;
-		dYear = year;
+		setDate(month, day, year);
 	}
 	else
 	{
-		cout << "Date invalid, setting date to:";
+		cout << "Date invalid, setting date to 1/1/1900";
 	}
 }
 
