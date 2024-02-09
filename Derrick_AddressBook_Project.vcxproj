@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="addressType.h" />
     <ClInclude Include="dateType.h" />
+    <ClInclude Include="personType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
