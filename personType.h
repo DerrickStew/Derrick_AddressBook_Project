@@ -5,8 +5,8 @@ using namespace std;
 class personType
 {
 private:
-	string firstName = "";
-	string lastName = "";
+	string firstName;
+	string lastName;
 
 public: 
 	// precondition - first and last name are supplied
