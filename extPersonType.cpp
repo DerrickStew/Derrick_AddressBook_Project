@@ -4,16 +4,10 @@
 using namespace std;
 
 extPersonType::extPersonType(string first, string last, int m, int d, int y,
-	string a, string city, string state, int zip, string  phone, string r)
+	string a, string city, string state, int zip, string  phone, string r): 
+	personType(first, last), birthdate(m,d,y), address(a, city, state, zip)
 {
-	setFirstName(first);
-	setLastName(last);
-	address.setAddress(a);
-	address.setCity(city);
-	address.setState(state);
-	address.setZipcode(zip);
-	birthdate.setDate(m, d, y);
-	setPhoneNumber(phone);
+	phonenumber = phone;
 	setRelationship(r);
 }
 
