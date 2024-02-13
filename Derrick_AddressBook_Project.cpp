@@ -13,7 +13,8 @@ int showMenu()
 	cout << endl << "1 - Search by last name " << endl;
 	cout << "2 - Search by birth month " << endl;
 	cout << "3 - Search by relationship " << endl;
-	cout << "4 - Quit " << endl;
+	cout << "4 - Print address book " << endl;
+	cout << "5 - Quit " << endl;
 	cin >> userInput;
 	return userInput;
 }
@@ -49,6 +50,10 @@ int main()
 			addressBook.findRelations(relationship);
 		}
 		else if (choice == 4)
+		{
+			addressBook.print();
+		}
+		else if (choice == 5)
 		{
 			cout << "You have ended the program";
 			break;
