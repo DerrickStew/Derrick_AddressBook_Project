@@ -3,8 +3,8 @@
 class addressBookType
 {
 private:
-	int maxLength;
-	int length; 
+	int maxLength = 500;
+	int length = 0; 
 	extPersonType addressList[500];
 
 public:
