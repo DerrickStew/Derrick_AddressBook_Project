@@ -57,24 +57,32 @@ void addressBookType::findPerson(string lName)
 
 void addressBookType::findBirthdays(int month)
 {
+	bool mFound = false;
 	for (int i = 0; i < length; i++)
 	{
 		if (addressList[i].getBirthMonth() == month)
 		{
 			addressList[i].print();
+			mFound = true;
 		}
 	}
+	if (!mFound)
+		cout << "No persons found within given month" << endl;
 }
 
 void addressBookType::findRelations(string relationship)
 {
+	bool rFound = false;
 	for (int i = 0; i < length; i++)
 	{
 		if (addressList[i].getRelationship() == relationship)
 		{
 			addressList[i].print();
+			rFound = true;
 		}
 	}
+	if (!rFound)
+		cout << "No persons found with given relationship" << endl;
 }
 
 void addressBookType::print()

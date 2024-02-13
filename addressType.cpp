@@ -36,11 +36,6 @@ void addressType::setZipcode(int zip)
 	{
 		zipcode = zip;
 	}
-	else if (zip <= 11111) //case for outside lowerbound zipcode
-	{
-		zipcode = 10000;
-		cout << "Zipcode is invalid" << endl;
-	}
 	else if (zip > 99999) //case for upperbound zipcode
 	{
 		zipcode = 10000;

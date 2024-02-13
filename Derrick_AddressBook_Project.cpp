@@ -24,7 +24,6 @@ int main()
 	addressBook.initEntry("AddressBookData.txt");
 	addressBook.sortEntries();
 	int choice;
-	addressBook.print();
 	do
 	{
 		choice = showMenu();
